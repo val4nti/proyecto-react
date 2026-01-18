@@ -2,6 +2,8 @@
 import HomeTemplate from './components/templates/HomeTemplate.jsx';
 import ProductCard from './components/molecules/ProductCard.jsx';
 import RegisterForm from './components/organisms/RegisterForm.jsx';
+import './style.css';
+//import index.css from './index.css';
 // Asegúrate de importar el CSS para que se vea como gamer
 //import './style.css'; 
 
