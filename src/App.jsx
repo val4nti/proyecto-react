@@ -22,6 +22,7 @@ function App() {
       </section>
 
       <hr className="my-5" />
+      
 
       {/* 2. SECCIÓN DE PRODUCTOS: Usando tu molécula ProductCard */}
       <section className="pb-5">
