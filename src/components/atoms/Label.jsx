@@ -1,9 +1,8 @@
-import React from 'react';
-
-export const Label = ({ text, required = false }) => {
+const Label = ({ text, required }) => {
   return (
     <label className="form-label fw-bold">
-      {text} {required && <span className="text-danger">*</span>}
+      {text}
+      {required && <span className="text-danger ms-1">*</span>}
     </label>
   );
 };

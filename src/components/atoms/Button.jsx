@@ -1,26 +1,13 @@
-// src/components/atoms/Button.jsx
-import React from 'react';
-
-// Este es tu átomo. Recibe 'text' para el nombre y 'onClick' para la acción.
-export const Button = ({ text, onClick, type = "button", variant = "primary", className = "" }) => {
+const Button = ({ text, variant = "primary", icon, onClick }) => {
   return (
-    <button 
-      type={type} 
-      // Usamos las clases que ya tienes en tu style.css y Bootstrap
-      className={`btn btn-${variant} ${className}`} 
+    <button
       onClick={onClick}
+      className={`btn btn-${variant} d-flex align-items-center gap-2 px-3 fw-bold`}
     >
+      {icon && <i className={`bi ${icon}`}></i>}
       {text}
     </button>
   );
 };
 
 export default Button;
-
-//import Button from './components/atoms/Button';
-
-// Para el Registro
-//<Button text="Guardar" variant="primary" onClick={handleGuardar} />
-
-// Para el Carrito
-//<Button text="Eliminar" variant="danger" />

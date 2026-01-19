@@ -1,14 +1,9 @@
-import React from 'react';
-
-export const Input = ({ type = "text", placeholder, name, value, onChange, className = "" }) => {
+const Input = ({ placeholder }) => {
   return (
-    <input 
-      type={type}
-      name={name}
-      value={value}
-      onChange={onChange}
+    <input
+      className="form-control me-2"
+      type="search"
       placeholder={placeholder}
-      className={`form-control ${className}`} // Clase de Bootstrap que ya usas
     />
   );
 };
