@@ -1,3 +1,4 @@
+// src/components/molecules/NavMenu.jsx
 import Link from '../atoms/Link';
 
 const NavMenu = () => {

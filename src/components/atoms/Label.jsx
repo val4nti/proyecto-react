@@ -1,3 +1,4 @@
+// src/components/aroms/Label.jsx
 const Label = ({ text, required }) => {
   return (
     <label className="form-label fw-bold">

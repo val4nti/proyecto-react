@@ -1,3 +1,4 @@
+// src/components/molecules/Brand.jsx
 import Image from '../atoms/Image';
 
 const Brand = () => {

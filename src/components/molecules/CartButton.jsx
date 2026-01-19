@@ -1,3 +1,4 @@
+// src/components/molecules/CartButton.jsx
 import Button from '../atoms/Button';
 
 const CartButton = () => {

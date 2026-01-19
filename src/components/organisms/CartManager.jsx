@@ -1,3 +1,4 @@
+// src/components/organisms/CartManager.jsx
 import React, { useState, useEffect } from 'react';
 
 const CartManager = () => {

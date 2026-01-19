@@ -1,3 +1,4 @@
+// src/components/atoms/Input.jsx
 const Input = ({ placeholder }) => {
   return (
     <input

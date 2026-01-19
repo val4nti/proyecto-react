@@ -1,3 +1,4 @@
+// src/components/atoms/Button.jsx
 const Button = ({ text, variant = "primary", icon, onClick }) => {
   return (
     <button

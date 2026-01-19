@@ -1,3 +1,4 @@
+// src/components/atoms/Image.jsx
 const Image = ({ src, alt, size = 45 }) => {
   return (
     <img
