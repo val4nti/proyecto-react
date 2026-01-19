@@ -1,14 +1,15 @@
 // src/components/molecules/NavMenu.jsx
+// src/components/molecules/NavMenu.jsx
 import Link from '../atoms/Link';
 
 const NavMenu = () => {
   const items = [
-    { text: "Home", active: true },
-    { text: "Categorías" },
-    { text: "Ofertas" },
-    { text: "Nosotros" },
-    { text: "Blog" },
-    { text: "Contacto" }
+    { text: "Home", href: "/", active: true },
+    { text: "Categorías", href: "/categorias" },
+    { text: "Ofertas", href: "/ofertas" },
+    { text: "Nosotros", href: "/nosotros" }, // <- Asegúrate que esta ruta coincida con tu router
+    { text: "Blog", href: "/blog" },
+    { text: "Contacto", href: "/contacto" }
   ];
 
   return (
@@ -17,6 +18,7 @@ const NavMenu = () => {
         <Link
           key={index}
           text={item.text}
+          href={item.href} // Pasamos el href al átomo
           active={item.active || false}
         />
       ))}

@@ -13,5 +13,3 @@ const Link = ({ text, href = "#", active = false }) => {
     </a>
   );
 };
-
-export default Link;
