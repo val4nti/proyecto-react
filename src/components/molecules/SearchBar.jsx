@@ -1,6 +1,5 @@
-// src/components/molecules/SearchBar.jsx
-import Input from '../atoms/Input';
-import Button from '../atoms/Button';
+import Input from "../atoms/Input";
+import Button from "../atoms/Button";
 
 const SearchBar = () => {
   return (
@@ -12,5 +11,3 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
-
-
