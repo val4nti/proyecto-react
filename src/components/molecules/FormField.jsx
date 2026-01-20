@@ -2,19 +2,14 @@
 import Label from "../atoms/Label";
 import Input from "../atoms/Input";
 
-const FormField = ({ label, type, placeholder, name, value, onChange, required }) => {
+const FormField = ({ label, type="text", placeholder }) => {
   return (
     <div className="mb-3">
-      <Label text={label} required={required} />
-      <Input
-        type={type}
-        placeholder={placeholder}
-        name={name}
-        value={value}
-        onChange={onChange}
-      />
+      <Label text={label} />
+      <Input type={type} placeholder={placeholder} />
     </div>
   );
 };
 
 export default FormField;
+

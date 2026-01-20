@@ -1,12 +1,12 @@
 // src/components/atoms/Button.jsx
-const Button = ({ text, variant = "primary", icon }) => {
+const Button = ({ text, variant = "primary", onClick, type="button" }) => {
   return (
-    <button className={`btn btn-${variant}`}>
-      {icon && <i className={`bi ${icon} me-2`}></i>}
+    <button type={type} className={`btn btn-${variant}`} onClick={onClick}>
       {text}
     </button>
   );
 };
 
 export default Button;
+
 

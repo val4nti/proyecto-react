@@ -1,17 +1,15 @@
 // src/App.jsx
-import HomeTemplate from "./components/templates/HomeTemplate";
-
 function App() {
   return (
-    <HomeTemplate>
-      <div className="container mt-5">
-        <h1>Navbar funcionando 🚀</h1>
-      </div>
-    </HomeTemplate>
+    <div className="container mt-5">
+      <h1>React está funcionando ✅</h1>
+      <p>Si ves esto, no hay pantalla blanca.</p>
+    </div>
   );
 }
 
 export default App;
+
 
 
 

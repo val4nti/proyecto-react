@@ -1,11 +1,16 @@
 // src/components/templates/HomeTemplate.jsx
 import Navbar from "../organisms/Navbar";
+import ProductsSection from "../organisms/ProductsSection";
+import ContactSection from "../organisms/ContactSection";
+import Footer from "../organisms/Footer";
 
-const HomeTemplate = ({ children }) => {
+const HomeTemplate = () => {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <ProductsSection />
+      <ContactSection />
+      <Footer />
     </>
   );
 };

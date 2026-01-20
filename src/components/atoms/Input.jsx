@@ -11,14 +11,17 @@
 
 export default Input;
 */
-const Input = ({ placeholder }) => {
+const Input = ({ type = "text", placeholder, value, onChange }) => {
   return (
     <input
-      type="text"
-      className="form-control me-2"
+      type={type}
+      className="form-control"
       placeholder={placeholder}
+      value={value}
+      onChange={onChange}
     />
   );
 };
 
 export default Input;
+

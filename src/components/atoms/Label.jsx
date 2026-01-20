@@ -1,11 +1,7 @@
 // src/components/aroms/Label.jsx
-const Label = ({ text, required }) => {
-  return (
-    <label className="form-label fw-bold">
-      {text}
-      {required && <span className="text-danger ms-1">*</span>}
-    </label>
-  );
+const Label = ({ text }) => {
+  return <label className="form-label">{text}</label>;
 };
 
 export default Label;
+
