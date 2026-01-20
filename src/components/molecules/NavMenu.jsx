@@ -7,7 +7,7 @@ const NavMenu = () => {
     { text: "Home", href: "/", active: true },
     { text: "Categorías", href: "/categorias" },
     { text: "Ofertas", href: "/ofertas" },
-    { text: "Nosotros", href: "/nosotros" }, // <- Asegúrate que esta ruta coincida con tu router
+    { text: "Nosotros", href: "/nosotros" }, 
     { text: "Blog", href: "/blog" },
     { text: "Contacto", href: "/contacto" }
   ];
@@ -18,7 +18,7 @@ const NavMenu = () => {
         <Link
           key={index}
           text={item.text}
-          href={item.href} // Pasamos el href al átomo
+          href={item.href} 
           active={item.active || false}
         />
       ))}
