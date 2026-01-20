@@ -1,14 +1,12 @@
 // src/App.jsx
+import Home from "./pages/Home";
+
 function App() {
-  return (
-    <div className="container mt-5">
-      <h1>React está funcionando ✅</h1>
-      <p>Si ves esto, no hay pantalla blanca.</p>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
+
 
 
 

@@ -1,18 +1,16 @@
 // src/components/templates/HomeTemplate.jsx
 import Navbar from "../organisms/Navbar";
-import ProductsSection from "../organisms/ProductsSection";
-import ContactSection from "../organisms/ContactSection";
 import Footer from "../organisms/Footer";
 
-const HomeTemplate = () => {
+const HomeTemplate = ({ children }) => {
   return (
     <>
       <Navbar />
-      <ProductsSection />
-      <ContactSection />
+      <main className="container my-5">{children}</main>
       <Footer />
     </>
   );
 };
 
 export default HomeTemplate;
+
