@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import FormField from '../molecules/FormField';
 import Button from '../atoms/Button';
-//import AxiosConfig from '../AxiosConfig';
+import api from '../AxiosConfig';
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
