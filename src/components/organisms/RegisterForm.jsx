@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import FormField from '../molecules/FormField';
 import Button from '../atoms/Button';
+//import AxiosConfig from '../AxiosConfig';
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ const RegisterForm = () => {
     });
   };
 
-  const handleGuardar = () => {
+  const handleGuardar = async () => {
     const { nombre, correo, password, rol, fechaNacimiento } = formData;
     // Validación de nombre
     if (!nombre.trim()) {
@@ -57,6 +58,7 @@ const RegisterForm = () => {
     const cumple = new Date(fechaNacimiento);
     let edad = hoy.getFullYear() - cumple.getFullYear();
     const m = hoy.getMonth() - cumple.getMonth();
+
     if (m < 0 || (m === 0 && hoy.getDate() < cumple.getDate())) {
       edad--;
     }
@@ -66,11 +68,23 @@ const RegisterForm = () => {
       return;
     }
 
+
     // Descuento Duoc
-    if (correo.toLowerCase().endsWith('@duocuc.cl')) {
-      alert("Usuario DUOC: 20% de descuento de por vida 🎉");
-    } else {
-      alert("Usuario registrado correctamente.");
+   try {
+      const respuesta = await api.post('/registro', formData);
+      alert(`${respuesta.data.mensaje}`);
+      
+      if (correo.toLowerCase().endsWith('@duocuc.cl')) {
+        alert("¡Recuerda que tienes 20% de descuento por ser DUOC!");
+      }
+
+      //Limpiar el formulario después de guardar
+      setFormData({ nombre: '', correo: '', password: '', rol: '', fechaNacimiento: '' });
+
+    } catch (error) {
+      console.error("Error al registrar:", error);
+      // Si el backend envía un error (ej: correo ya existe), lo mostramos
+      alert(error.response?.data?.error || "Error al conectar con el servidor de AWS");
     }
   };
 

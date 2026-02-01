@@ -1,16 +1,16 @@
 // src/App.jsx
 import HomeTemplate from './components/templates/HomeTemplate.jsx';
 import ProductCard from './components/molecules/ProductCard.jsx';
+import ProductsSection from './components/organisms/ProductsSection.jsx';
 import RegisterForm from './components/organisms/RegisterForm.jsx';
 import './style.css';
 //import index.css from './index.css';
-// Asegúrate de importar el CSS para que se vea como gamer
 //import './style.css'; 
 
 function App() {
   return (
     <HomeTemplate>
-      {/* 1. SECCIÓN DE REGREISTRO: Aquí probamos tu lógica de la pauta */}
+      {/* 1. SECCIÓN DE REGREISTRO */}
       <section className="py-5">
         <div className="container">
           <div className="row justify-content-center">
@@ -24,7 +24,7 @@ function App() {
       <hr className="my-5" />
       
 
-      {/* 2. SECCIÓN DE PRODUCTOS: Usando tu molécula ProductCard */}
+      {/* 2. SECCIÓN DE PRODUCTOS: */}
       <section className="pb-5">
         <div className="container">
           <h2 className="mb-4 text-dark fw-bold">Ofertas Destacadas</h2>
