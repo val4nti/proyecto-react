@@ -5,7 +5,10 @@ import Button from '../atoms/Button';
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
+    nombre: '',
     correo: '',
+    password: '',
+    rol: '',
     fechaNacimiento: '',
   });
 
@@ -17,7 +20,12 @@ const RegisterForm = () => {
   };
 
   const handleGuardar = () => {
-    const { correo, fechaNacimiento } = formData;
+    const { nombre, correo, password, rol, fechaNacimiento } = formData;
+    // Validación de nombre
+    if (!nombre.trim()) {
+      alert("El nombre es obligatorio.");
+      return;
+    }
 
     // Validación de correo
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -26,6 +34,18 @@ const RegisterForm = () => {
       return;
     }
 
+    //Validación de contraseña
+    if (password.length < 6) {
+      alert("La contraseña debe tener al menos 6 caracteres.");
+      return;
+    }
+
+    // Validación de rol
+    if (!rol) {
+      alert("Debes seleccionar un rol.");
+      return;
+    }
+    
     // Fecha obligatoria
     if (!fechaNacimiento) {
       alert("Debes ingresar tu fecha de nacimiento.");
@@ -62,6 +82,18 @@ const RegisterForm = () => {
         <div className="row">
           <div className="col-6">
             <FormField
+              label="Nombre"
+              type="text"
+              name="nombre"
+              placeholder="Ingrese su nombre"
+              value={formData.nombre}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="col-6">
+            <FormField
               label="Correo electrónico"
               type="email"
               name="correo"
@@ -69,6 +101,35 @@ const RegisterForm = () => {
               value={formData.correo}
               onChange={handleChange}
               required
+            />
+          </div>
+
+          <div className="col-6">
+            <FormField
+              label="Contraseña"
+              type="password"
+              name="password"
+              placeholder="********"
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="col-6">
+            <FormField
+              label="Rol"
+              type="select"
+              name="rol"
+              value={formData.rol}
+              onChange={handleChange}
+              required
+              options={[
+                { value: '', label: 'Seleccione un rol' },
+                { value: 'admin', label: 'Administrador' },
+                { value: 'vendedor', label: 'Vendedor' },
+                { value: 'cliente', label: 'Cliente' },
+              ]}
             />
           </div>
 
@@ -82,6 +143,7 @@ const RegisterForm = () => {
               required
             />
           </div>
+          
         </div>
 
         <div className="text-end mt-3">

@@ -11,17 +11,21 @@
 
 export default Input;
 */
-const Input = ({ type = "text", placeholder, value, onChange }) => {
+// src/components/atoms/Input.jsx
+const Input = ({ type, name, value, onChange, placeholder, required }) => {
   return (
     <input
-      type={type}
       className="form-control"
-      placeholder={placeholder}
+      type={type}
+      name={name}
       value={value}
       onChange={onChange}
+      placeholder={placeholder}
+      required={required}
     />
   );
 };
 
 export default Input;
+
 
